@@ -42,7 +42,7 @@ def extract_data(xpath, data_list, page):
 def main():
     with sync_playwright() as p:
         # browser = p.chromium.launch(headless=False)
-        browser = p.chromium.launch(executable_path='C:\Program Files\Google\Chrome\Application\chrome.exe', headless=False)
+        browser = p.chromium.launch(channel="chrome", headless=False)
         page = browser.new_page()
 
         page.goto("https://www.google.com/maps/@32.9817464,70.1930781,3.67z?", timeout=60000)
